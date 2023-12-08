@@ -46,7 +46,7 @@ int main(int argc, char * argv[])
 {
     char ope;
     get_opt(argc, argv);
-    //创建并初始化组数组
+    //创建并初始化组数组,一开始想直接用动态数组，后来想可能会在栈里占太多空间，改成malloc
     S = (int)pow(2,s);
     List* sets = (List*)malloc( S * sizeof(List));
     for (int i = 0; i < S; i++)

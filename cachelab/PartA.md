@@ -104,12 +104,11 @@ int main(int argc, char * argv[])
 {
     char ope;
     get_opt(argc, argv);
-    while ((fscanf(filename, " %c %lx,%d\n", &ope, &addr, &b)) != EOF)
+    while ((fscanf(filename, " %c %lx,%zd\n", &ope, &addr, &x)) != EOF)
     {
         switch (ope)
         {
         case 'S':
-           ;
         case 'L':
 
             break;
